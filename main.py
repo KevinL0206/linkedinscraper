@@ -9,8 +9,6 @@ import os
 # Change root logger level (default is WARN)
 logging.basicConfig(level=logging.INFO)
 
-os.environ["LI_AT_COOKIE"] = "AQEDATFq_NwEBbiyAAABjTgmnxMAAAGNtJeo0VYAlV4W_0FUE2zeEA--8uBdrJCZN8aNsCawi3QbytWyELlH7q7JvgqgmNVM3UohQDdKmJFdIvwjg6Qv0v5J8Df8T36_85yGitrS9weLYdoTK0iIHqGR"
-
 # Fired once for each successfully processed job
 # Create an empty DataFrame
 df = pd.DataFrame(columns=['Title', 'Company','Place' , 'Date', 'Link', 'Stack', 'Description','Applied'])

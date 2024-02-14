@@ -27,8 +27,8 @@ def on_data(data: EventData):
     ignore_keywords = [keyword for keyword in ignore if keyword in data.description.lower()]
     
     # Extract years of experience from the description
-    experience_matches = re.findall(r'(\d+)\s*year[s]?', data.description.lower())
-    experience = int(experience_matches[0]) if experience_matches else None
+    experience_matches = re.findall(r'(\d+)\s*years?\s*(of)?\s*experience', data.description.lower())
+    experience = int(experience_matches[0][0]) if experience_matches else None
 
     # Append data to the DataFrame only if any of the keywords is in the description
     if found_keywords and not ignore_keywords:
